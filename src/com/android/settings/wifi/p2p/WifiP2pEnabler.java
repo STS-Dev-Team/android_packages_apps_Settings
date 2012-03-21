@@ -98,9 +98,6 @@ public class WifiP2pEnabler implements Preference.OnPreferenceChangeListener {
         mCheckBox.setEnabled(false);
         final boolean enable = (Boolean) value;
         if (enable) {
-            if (SystemProperties.OMAP_ENHANCEMENT && mWifiManager != null) {
-                mWifiManager.setWifiEnabled(false);
-            }
             mWifiP2pManager.enableP2p(mChannel);
         } else {
             mWifiP2pManager.disableP2p(mChannel);
@@ -113,6 +110,9 @@ public class WifiP2pEnabler implements Preference.OnPreferenceChangeListener {
         switch (state) {
             case WifiP2pManager.WIFI_P2P_STATE_ENABLED:
                 mCheckBox.setChecked(true);
+                if (SystemProperties.OMAP_ENHANCEMENT && mWifiManager != null) {
+                    mWifiManager.setWifiEnabled(false);
+                }
                 break;
             case WifiP2pManager.WIFI_P2P_STATE_DISABLED:
                 mCheckBox.setChecked(false);
