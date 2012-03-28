@@ -41,6 +41,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.os.SystemProperties;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -135,6 +136,10 @@ public class Memory extends SettingsPreferenceFragment {
                 StorageVolumePreferenceCategory svpc = mStorageVolumePreferenceCategories[i];
                 if (path.equals(svpc.getStorageVolume().getPath())) {
                     svpc.onStorageStateChanged();
+                    if (SystemProperties.OMAP_ENHANCEMENT && svpc.isUnmountInProgress() &&
+                            Environment.MEDIA_UNMOUNTED.equals(newState)) {
+                        svpc.setUnmountInProgress(false);
+                    }
                     break;
                 }
             }
@@ -215,6 +220,9 @@ public class Memory extends SettingsPreferenceFragment {
                 String state = mStorageManager.getVolumeState(storageVolume.getPath());
                 if (Environment.MEDIA_MOUNTED.equals(state) ||
                         Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+                    if (SystemProperties.OMAP_ENHANCEMENT) {
+                        svpc.setUnmountInProgress(true);
+                    }
                     unmount();
                 } else {
                     mount();
