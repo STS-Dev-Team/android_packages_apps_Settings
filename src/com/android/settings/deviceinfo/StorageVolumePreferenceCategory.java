@@ -257,8 +257,10 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory implemen
             addPreference(mFormatPreference);
         }
 
-        if (SystemProperties.OMAP_ENHANCEMENT && !mUnmountInProgress) {
-            mMountTogglePreference.setEnabled(true);
+        if (SystemProperties.OMAP_ENHANCEMENT) {
+            if (!mUnmountInProgress) {
+                mMountTogglePreference.setEnabled(true);
+            }
         } else {
             mMountTogglePreference.setEnabled(true);
         }
