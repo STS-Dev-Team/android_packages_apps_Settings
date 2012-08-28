@@ -23,7 +23,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.preference.Preference;
@@ -33,8 +32,10 @@ import android.provider.Settings;
 import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -56,11 +57,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_COPYRIGHT = "copyright";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
-    private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
     private static final String KEY_DEVICE_MODEL = "device_model";
-    private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
@@ -103,17 +102,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         addStringPreference(KEY_DEVICE_SCREEN_RESOLUTION,
                 SystemProperties.get("ro.device.screen_res", null));
 
-        if (!SELinux.isSELinuxEnabled()) {
-            String status = getResources().getString(R.string.selinux_status_disabled);
-            setStringSummary(KEY_SELINUX_STATUS, status);
-        } else if (!SELinux.isSELinuxEnforced()) {
-            String status = getResources().getString(R.string.selinux_status_permissive);
-            setStringSummary(KEY_SELINUX_STATUS, status);
-        }
-
-        // Remove selinux information if property is not present
-        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
-                PROPERTY_SELINUX_STATUS);
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
