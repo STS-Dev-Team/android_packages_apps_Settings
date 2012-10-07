@@ -4284,4 +4284,7 @@
     <string name="usb_mass_storage_title">Mass storage</string>
     <string name="usb_mass_storage_summary">Enable USB mass storage</string>
 
+    <!-- otaupdater -->
+    <string name="otaupdate_settings_title">OTA updates</string>
+    <string name="otaupdate_settings_summary">Check for, view or install available updates</string>
 </resources>

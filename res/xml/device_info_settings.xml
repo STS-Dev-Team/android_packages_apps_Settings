@@ -40,7 +40,16 @@
                     android:targetPackage="com.android.settings"
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
-        
+
+        <!-- OTA Updates -->
+        <PreferenceScreen android:key="ota_updates"
+                android:title="@string/otaupdate_settings_title" 
+                android:summary="@string/otaupdate_settings_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.otaupdater"
+                    android:targetClass="com.otaupdater.OTAUpdaterActivity" />
+        </PreferenceScreen>
+
         <!-- Anonymous statistics - (AOKPStats) -->
         <PreferenceScreen
             android:key="aokpstats"
