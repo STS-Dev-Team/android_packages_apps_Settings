@@ -65,6 +65,18 @@
     </PreferenceScreen>
 
     <CheckBoxPreference
+        android:key="toggle_moto_oem"
+        android:title="@string/moto_oem_quick_toggle_title"
+        android:summary="@string/moto_oem_quick_toggle_summary"
+        android:persistent="true" />
+
+    <CheckBoxPreference
+        android:key="toggle_imsi_fix"
+        android:title="@string/imsi_fix_quick_toggle_title"
+        android:summary="@string/imsi_fix_quick_toggle_summary"
+        android:persistent="true" />
+
+    <CheckBoxPreference
         android:key="toggle_nsd"
         android:title="@string/nsd_quick_toggle_title"
         android:summary="@string/nsd_quick_toggle_summary"
