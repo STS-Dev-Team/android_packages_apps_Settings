@@ -77,6 +77,12 @@
         android:persistent="true" />
 
     <CheckBoxPreference
+        android:key="toggle_world_phone"
+        android:title="@string/world_phone_quick_toggle_title"
+        android:summary="@string/world_phone_quick_toggle_summary"
+        android:persistent="true" />
+
+    <CheckBoxPreference
         android:key="toggle_nsd"
         android:title="@string/nsd_quick_toggle_title"
         android:summary="@string/nsd_quick_toggle_summary"

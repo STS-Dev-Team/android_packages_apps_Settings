@@ -43,6 +43,8 @@ import com.android.settings.NsdEnabler;
 
 public class WirelessSettings extends SettingsPreferenceFragment {
 
+    protected Context mContext;
+
     private static final String KEY_TOGGLE_AIRPLANE = "toggle_airplane";
     private static final String KEY_TOGGLE_NFC = "toggle_nfc";
     private static final String KEY_WIMAX_SETTINGS = "wimax_settings";
@@ -55,6 +57,7 @@ public class WirelessSettings extends SettingsPreferenceFragment {
     private static final String KEY_CELL_BROADCAST_SETTINGS = "cell_broadcast_settings";
     private static final String KEY_TOGGLE_MOTO_OEM = "toggle_moto_oem";
     private static final String KEY_TOGGLE_IMSI_FIX = "toggle_imsi_fix";
+    private static final String KEY_TOGGLE_WORLD_PHONE = "toggle_world_phone";
 
     public static final String EXIT_ECM_RESULT = "exit_ecm_result";
     public static final int REQUEST_CODE_EXIT_ECM = 1;
@@ -68,6 +71,7 @@ public class WirelessSettings extends SettingsPreferenceFragment {
     private CheckBoxPreference mMotoOEMPreference;
     private ImsiFixEnabler mImsiFixEnabler;
     private CheckBoxPreference mImsiFixPreference;
+    private CheckBoxPreference mWorldPhonePreference;
 
     /**
      * Invoked on each preference click in this hierarchy, overrides
@@ -82,6 +86,8 @@ public class WirelessSettings extends SettingsPreferenceFragment {
             startActivityForResult(
                 new Intent(TelephonyIntents.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS, null),
                 REQUEST_CODE_EXIT_ECM);
+            return true;
+        } else if (preference == mWorldPhonePreference) {
             return true;
         }
 /*
@@ -121,6 +127,9 @@ public class WirelessSettings extends SettingsPreferenceFragment {
 
         mMotoOEMPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_MOTO_OEM);
         mImsiFixPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_IMSI_FIX);
+        mWorldPhonePreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_WORLD_PHONE);
+        mWorldPhonePreference.setChecked(Settings.System.getInt(getActivity()
+                       .getContentResolver(), Settings.System.WORLD_PHONE_STATE, 0) == 1);
 
         mAirplaneModeEnabler = new AirplaneModeEnabler(activity, mAirplaneModePreference);
         mNfcEnabler = new NfcEnabler(activity, nfc, androidBeam);
