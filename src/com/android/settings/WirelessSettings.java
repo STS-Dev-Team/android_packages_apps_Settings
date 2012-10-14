@@ -175,6 +175,11 @@ public class WirelessSettings extends SettingsPreferenceFragment {
             getPreferenceScreen().removePreference(findPreference(KEY_MOBILE_NETWORK_SETTINGS));
         }
 
+        // Remove World Phone toggle if not world capable
+        if (SystemProperties.getBoolean(TelephonyProperties.PROPERTY_NOT_WORLD_PHONE, true)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_TOGGLE_WORLD_PHONE));
+        }
+
         // Enable Proxy selector settings if allowed.
         Preference mGlobalProxy = findPreference(KEY_PROXY_SETTINGS);
         DevicePolicyManager mDPM = (DevicePolicyManager)
