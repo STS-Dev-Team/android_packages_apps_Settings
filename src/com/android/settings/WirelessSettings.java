@@ -71,6 +71,7 @@ public class WirelessSettings extends SettingsPreferenceFragment {
     private CheckBoxPreference mMotoOEMPreference;
     private ImsiFixEnabler mImsiFixEnabler;
     private CheckBoxPreference mImsiFixPreference;
+    private WorldPhoneEnabler mWorldPhoneEnabler;
     private CheckBoxPreference mWorldPhonePreference;
 
     /**
@@ -87,18 +88,7 @@ public class WirelessSettings extends SettingsPreferenceFragment {
                 new Intent(TelephonyIntents.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS, null),
                 REQUEST_CODE_EXIT_ECM);
             return true;
-        } else if (preference == mWorldPhonePreference) {
-            return true;
         }
-/*
-	else if (preference == mMotoOEMPreference && Boolean.parseBoolean(
-                SystemProperties.get(TelephonyProperties.PROPERTY_MOTO_OEM))) {
-            return true;
-        } else if (preference == mImsiFixPreference && Boolean.parseBoolean(
-                SystemProperties.get(TelephonyProperties.PROPERTY_IMSI_FIX))) {
-            return true;
-        }
-*/
         // Let the intents be launched by the Preference manager
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -128,13 +118,12 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         mMotoOEMPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_MOTO_OEM);
         mImsiFixPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_IMSI_FIX);
         mWorldPhonePreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_WORLD_PHONE);
-        mWorldPhonePreference.setChecked(Settings.System.getInt(getActivity()
-                       .getContentResolver(), Settings.System.WORLD_PHONE_STATE, 0) == 1);
 
         mAirplaneModeEnabler = new AirplaneModeEnabler(activity, mAirplaneModePreference);
         mNfcEnabler = new NfcEnabler(activity, nfc, androidBeam);
         mMotoOEMEnabler = new MotoOEMEnabler (activity, mMotoOEMPreference);
         mImsiFixEnabler = new ImsiFixEnabler (activity, mImsiFixPreference);
+        mWorldPhoneEnabler = new WorldPhoneEnabler (activity, mWorldPhonePreference);
 
         // Remove NSD checkbox by default
         getPreferenceScreen().removePreference(nsd);
@@ -242,6 +231,9 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         if (mMotoOEMEnabler != null) {
             mMotoOEMEnabler.resume();
         }
+        if (mWorldPhoneEnabler != null) {
+            mWorldPhoneEnabler.resume();
+        }
     }
 
     @Override
@@ -260,6 +252,9 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         }
         if (mMotoOEMEnabler != null) {
             mMotoOEMEnabler.pause();
+        }
+        if (mWorldPhoneEnabler != null) {
+            mWorldPhoneEnabler.resume();
         }
     }
 
