@@ -90,6 +90,12 @@
         android:persistent="true" />
 
     <CheckBoxPreference
+        android:key="toggle_gsm_signalstrength_fix"
+        android:title="@string/gsm_signalstrength_fix_quick_toggle_title"
+        android:summary="@string/gsm_signalstrength_fix_quick_toggle_summary"
+        android:persistent="true" />
+
+    <CheckBoxPreference
         android:key="toggle_nsd"
         android:title="@string/nsd_quick_toggle_title"
         android:summary="@string/nsd_quick_toggle_summary"
