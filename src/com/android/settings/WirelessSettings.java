@@ -38,6 +38,8 @@ import com.android.internal.telephony.TelephonyIntents;
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.settings.MotoOEMEnabler;
 import com.android.settings.ImsiFixEnabler;
+import com.android.settings.WorldPhoneEnabler;
+import com.android.settings.GSMSignalStrengthFixEnabler;
 import com.android.settings.nfc.NfcEnabler;
 import com.android.settings.NsdEnabler;
 
@@ -58,6 +60,7 @@ public class WirelessSettings extends SettingsPreferenceFragment {
     private static final String KEY_TOGGLE_MOTO_OEM = "toggle_moto_oem";
     private static final String KEY_TOGGLE_IMSI_FIX = "toggle_imsi_fix";
     private static final String KEY_TOGGLE_WORLD_PHONE = "toggle_world_phone";
+    private static final String KEY_TOGGLE_GSM_SIGNALSTRENGTH_FIX = "toggle_gsm_signalstrength_fix";
 
     public static final String EXIT_ECM_RESULT = "exit_ecm_result";
     public static final int REQUEST_CODE_EXIT_ECM = 1;
@@ -73,6 +76,8 @@ public class WirelessSettings extends SettingsPreferenceFragment {
     private CheckBoxPreference mImsiFixPreference;
     private WorldPhoneEnabler mWorldPhoneEnabler;
     private CheckBoxPreference mWorldPhonePreference;
+    private GSMSignalStrengthFixEnabler mGSMSignalStrengthFixEnabler;
+    private CheckBoxPreference mGSMSignalStrengthFixPreference;
 
     /**
      * Invoked on each preference click in this hierarchy, overrides
@@ -118,12 +123,14 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         mMotoOEMPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_MOTO_OEM);
         mImsiFixPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_IMSI_FIX);
         mWorldPhonePreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_WORLD_PHONE);
+        mGSMSignalStrengthFixPreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_GSM_SIGNALSTRENGTH_FIX);
 
         mAirplaneModeEnabler = new AirplaneModeEnabler(activity, mAirplaneModePreference);
         mNfcEnabler = new NfcEnabler(activity, nfc, androidBeam);
         mMotoOEMEnabler = new MotoOEMEnabler (activity, mMotoOEMPreference);
         mImsiFixEnabler = new ImsiFixEnabler (activity, mImsiFixPreference);
         mWorldPhoneEnabler = new WorldPhoneEnabler (activity, mWorldPhonePreference);
+        mGSMSignalStrengthFixEnabler = new GSMSignalStrengthFixEnabler (activity, mGSMSignalStrengthFixPreference);
 
         // Remove NSD checkbox by default
         getPreferenceScreen().removePreference(nsd);
@@ -178,6 +185,11 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         // Remove World Phone toggle if not world capable
         if (SystemProperties.getBoolean(TelephonyProperties.PROPERTY_NOT_WORLD_PHONE, true)) {
             getPreferenceScreen().removePreference(findPreference(KEY_TOGGLE_WORLD_PHONE));
+        }
+
+        // Remove GSM SignalStrength Fix toggle if not world Phone
+        if (SystemProperties.getBoolean(TelephonyProperties.PROPERTY_NOT_WORLD_PHONE, true)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_TOGGLE_GSM_SIGNALSTRENGTH_FIX));
         }
 
         // Enable Proxy selector settings if allowed.
@@ -239,6 +251,9 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         if (mWorldPhoneEnabler != null) {
             mWorldPhoneEnabler.resume();
         }
+        if (mGSMSignalStrengthFixEnabler != null) {
+            mGSMSignalStrengthFixEnabler.resume();
+        }
     }
 
     @Override
@@ -260,6 +275,9 @@ public class WirelessSettings extends SettingsPreferenceFragment {
         }
         if (mWorldPhoneEnabler != null) {
             mWorldPhoneEnabler.resume();
+        }
+        if (mGSMSignalStrengthFixEnabler != null) {
+            mGSMSignalStrengthFixEnabler.resume();
         }
     }
 

@@ -2190,6 +2190,11 @@
     <!-- Description of World Phone in the 1st level settings screen. [CHAR LIMIT=NONE] -->
     <string name="world_phone_quick_toggle_summary">Shows preferences for Global mode in Mobile networks settings</string>
 
+    <!-- Used in the 1st-level settings screen to turn on GSM Signal Strength Fix -->
+    <string name="gsm_signalstrength_fix_quick_toggle_title">Enable GSM Signal Strength Fix</string>
+    <!-- Description of GSM Signal Strength Fix in the 1st level settings screen. [CHAR LIMIT=NONE] -->
+    <string name="gsm_signalstrength_fix_quick_toggle_summary">Needed to display proper signal strength reading in GSM mode</string>
+
     <!-- Security & location settings screen, section header for settings relating to location -->
     <string name="location_title">My Location</string>
     <!-- [CHAR LIMIT=30] Security & location settings screen, setting check box label for Google location service (cell ID, wifi, etc.) -->
