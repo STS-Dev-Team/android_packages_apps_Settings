@@ -145,7 +145,6 @@ public class ApnSettings extends SettingsPreferenceFragment implements
         getActivity().unregisterReceiver(mMobileStateReceiver);
     }
 
-    @Override
     protected void onDestroy() {
         super.onDestroy();
 

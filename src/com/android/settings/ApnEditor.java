@@ -174,7 +174,7 @@ public class ApnEditor extends SettingsPreferenceFragment
         // types.  (This screen is not normally accessible on CDMA phones, but is useful for
         // testing.)
         TelephonyManager tm = (TelephonyManager)getSystemService(Activity.TELEPHONY_SERVICE);
-        if (tm.getCurrentPhoneType() == Phone.PHONE_TYPE_CDMA) {
+        if (tm.getCurrentPhoneType() == TelephonyManager.PHONE_TYPE_CDMA) {
             mRoamingProtocol.setOnPreferenceChangeListener(this);
         } else {
             getPreferenceScreen().removePreference(mRoamingProtocol);

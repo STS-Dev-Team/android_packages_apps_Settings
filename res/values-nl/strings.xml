@@ -2429,7 +2429,6 @@ Schakel het scherm uit om de geselecteerde melding in actie te zien of annuleer 
     <string name="wifi_security_wpa_wpa2">WPA/WPA2 PSK</string>
     <string name="wifi_security_psk_generic">@string/wifi_security_wpa_wpa2</string>
     <string name="wifi_security_eap">802.1x EAP</string>
-    <string name="fcc_equipment_id">Equipment ID</string>
     <string name="status_imei">IMEI</string>
     <string name="status_imei_sv">IMEI SV</string>
     <string name="lockpattern_need_to_unlock_footer" />

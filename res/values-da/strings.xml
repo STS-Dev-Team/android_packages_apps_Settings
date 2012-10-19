@@ -2407,8 +2407,6 @@
     <string name="cpu_info">CPU</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Hukommelse</string>
-    <!-- About phone screen, fcc equipment id label-->
-    <string name="fcc_equipment_id">Udstyrs-ID</string>
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">IME-vælgenotifikation</string>
