@@ -41,6 +41,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.android.internal.telephony.Phone;
+import com.android.internal.telephony.PhoneConstants;
+import com.android.internal.telephony.RILConstants;
 import com.android.internal.telephony.TelephonyProperties;
 
 
