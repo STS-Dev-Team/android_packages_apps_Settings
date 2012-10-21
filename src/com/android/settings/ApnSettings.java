@@ -82,7 +82,6 @@ public class ApnSettings extends SettingsPreferenceFragment implements
 
     private RestoreApnUiHandler mRestoreApnUiHandler;
     private RestoreApnProcessHandler mRestoreApnProcessHandler;
-    private HandlerThread mRestoreDefaultApnThread;
 
     private String mSelectedKey;
 
@@ -143,14 +142,6 @@ public class ApnSettings extends SettingsPreferenceFragment implements
     public void onPause() {
         super.onPause();
         getActivity().unregisterReceiver(mMobileStateReceiver);
-    }
-
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if (mRestoreDefaultApnThread != null) {
-            mRestoreDefaultApnThread.quit();
-        }
     }
 
     private void fillList() {
@@ -294,13 +285,12 @@ public class ApnSettings extends SettingsPreferenceFragment implements
             mRestoreApnUiHandler = new RestoreApnUiHandler();
         }
 
-        if (mRestoreApnProcessHandler == null ||
-            mRestoreDefaultApnThread == null) {
-            mRestoreDefaultApnThread = new HandlerThread(
+        if (mRestoreApnProcessHandler == null) {
+            HandlerThread restoreDefaultApnThread = new HandlerThread(
                     "Restore default APN Handler: Process Thread");
-            mRestoreDefaultApnThread.start();
+            restoreDefaultApnThread.start();
             mRestoreApnProcessHandler = new RestoreApnProcessHandler(
-                    mRestoreDefaultApnThread.getLooper(), mRestoreApnUiHandler);
+                    restoreDefaultApnThread.getLooper(), mRestoreApnUiHandler);
         }
 
         mRestoreApnProcessHandler
