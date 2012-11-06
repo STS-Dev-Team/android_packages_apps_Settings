@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s quiere acceder a tus contactos y a tu historial de llamadas. ¿Quieres permitir el acceso a %2$s?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"No volver a preguntar"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Ajustes de fecha y hora"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 p.m."</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Seleccionar zona horaria"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Regional (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Vista previa:"</string>
@@ -720,7 +718,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Versión de Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Número de modelo"</string>
-    <string name="fcc_equipment_id">Identificador</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"ID de equipo"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Versión de banda base"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Versión del kernel"</string>
     <string name="build_number" msgid="3075795840572241758">"Número de compilación"</string>
@@ -1430,6 +1428,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Ninguna cuenta está almacenando datos con copia de seguridad en estos momentos."</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Restauración automática"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Cuando vuelvas a instalar una aplicación, restaurar la configuración y los datos incluidos en la copia"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Hacer informe de errores"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Se recopilará información sobre el estado actual de tu dispositivo, que se enviará por correo electrónico. Pasarán unos minutos desde que se inicie el informe de errores hasta que se envíe, por lo que te recomendamos que tengas paciencia."</string>
+    <string name="report" msgid="302437572240018342">"Informe"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"Contraseña copias ordenador"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Las copias de seguridad completas de ordenador no están protegidas"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Tocar para cambiar o eliminar la contraseña para copias de seguridad completas de ordenador"</string>

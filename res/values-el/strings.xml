@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"Το %1$s ζητά πρόσβαση στις επαφές και στο ιστορικό κλήσεών σας. Να εκχωρηθεί πρόσβαση στο %2$s;"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Να μην ερωτηθώ ξανά"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Ρυθμίσεις ημερομηνίας &amp; ώρας"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 μμ"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Επιλέξτε ζώνη ώρας"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Τοπική (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Προεπισκόπηση:"</string>
@@ -714,6 +712,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Έκδοση Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Αριθμός μοντέλου"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"Αναγνωριστικό εξοπλισμού"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Έκδοση βασικού φάσματος"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Έκδοση Kernel"</string>
     <string name="build_number" msgid="3075795840572241758">"Αριθμός έκδοσης"</string>
@@ -1416,6 +1415,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Κανένας λογαριασμός δεν αποθηκεύει αντίγραφα ασφαλείας"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Αυτόματη επαναφορά"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Κατά την εκ νέου εγκατάσταση μιας εφαρμογής, ανακτήστε τις ρυθμίσεις και τα δεδομένα για τα οποία έχετε δημιουργήσει αντίγραφα ασφαλείας"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Λήψη αναφοράς σφάλματος"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Θα συλλέξει πληροφορίες σχετικά με την τρέχουσα κατάσταση της συσκευής σας και θα τις στείλει μέσω μηνύματος ηλεκτρονικού ταχυδρομείου. Απαιτείται λίγος χρόνος για τη σύνταξη της αναφοράς σφάλματος και την αποστολή της. Κάντε λίγη υπομονή."</string>
+    <string name="report" msgid="302437572240018342">"Αναφορά"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"Κωδ.πρόσβ.αντ.ασφ.επιφ.εργ."</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Τα πλήρη αντίγραφα ασφαλείας επιφάνειας εργασίας δεν προστατεύονται αυτήν τη στιγμή"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Αγγίξτε για αλλαγή ή κατάργηση του κωδικού πρόσβασης για τα πλήρη αντίγραφα ασφαλείας επιφάνειας εργασίας"</string>

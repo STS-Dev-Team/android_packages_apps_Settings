@@ -693,6 +693,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Android-versie"</string>
     <string name="model_number" msgid="3765737700545384794">"Modelnummer"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"Apparatuur-ID"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Smalbandversie"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Kernel-versie"</string>
     <string name="build_number" msgid="3075795840572241758">"Build-nummer"</string>
@@ -2515,7 +2516,6 @@ Schakel het scherm uit om de geselecteerde melding in actie te zien of annuleer 
     <string name="wifi_security_wpa_wpa2">WPA/WPA2 PSK</string>
     <string name="wifi_security_psk_generic">@string/wifi_security_wpa_wpa2</string>
     <string name="wifi_security_eap">802.1x EAP</string>
-    <string name="fcc_equipment_id">Equipment ID</string>
     <string name="status_imei">IMEI</string>
     <string name="status_imei_sv">IMEI SV</string>
     <string name="lockpattern_need_to_unlock_footer" />

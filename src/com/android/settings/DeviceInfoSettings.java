@@ -24,6 +24,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.preference.Preference;
@@ -58,9 +59,11 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_COPYRIGHT = "copyright";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
+    private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
     private static final String KEY_DEVICE_MODEL = "device_model";
+    private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
@@ -108,6 +111,18 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         } else {
             getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_MEMORY));
         }
+
+        if (!SELinux.isSELinuxEnabled()) {
+            String status = getResources().getString(R.string.selinux_status_disabled);
+            setStringSummary(KEY_SELINUX_STATUS, status);
+        } else if (!SELinux.isSELinuxEnforced()) {
+            String status = getResources().getString(R.string.selinux_status_permissive);
+            setStringSummary(KEY_SELINUX_STATUS, status);
+        }
+
+        // Remove selinux information if property is not present
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
+                PROPERTY_SELINUX_STATUS);
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
@@ -226,7 +241,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
      * @return the first line, if any.
      * @throws IOException if the file couldn't be read
      */
-    private String readLine(String filename) throws IOException {
+    private static String readLine(String filename) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
         try {
             return reader.readLine();
@@ -235,8 +250,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         }
     }
 
-    private String getFormattedKernelVersion() {
-        String procVersionStr;
+    public static String getFormattedKernelVersion() {
+		String procVersionStr;
 
         try {
             procVersionStr = readLine(FILENAME_PROC_VERSION);
@@ -277,6 +292,34 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
 
             return "Unavailable";
         }
+    }
+
+    public static String formatKernelVersion(String rawKernelVersion) {
+        // Example (see tests for more):
+        // Linux version 3.0.31-g6fb96c9 (android-build@xxx.xxx.xxx.xxx.com) \
+        //     (gcc version 4.6.x-xxx 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT \
+        //     Thu Jun 28 11:02:39 PDT 2012
+
+        final String PROC_VERSION_REGEX =
+            "Linux version (\\S+) " + /* group 1: "3.0.31-g6fb96c9" */
+            "\\((\\S+?)\\) " +        /* group 2: "x@y.com" (kernel builder) */
+            "(?:\\(gcc.+? \\)) " +    /* ignore: GCC version information */
+            "(#\\d+) " +              /* group 3: "#1" */
+            "(?:.*?)?" +              /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
+            "((Sun|Mon|Tue|Wed|Thu|Fri|Sat).+)"; /* group 4: "Thu Jun 28 11:02:39 PDT 2012" */
+
+        Matcher m = Pattern.compile(PROC_VERSION_REGEX).matcher(rawKernelVersion);
+        if (!m.matches()) {
+            Log.e(LOG_TAG, "Regex did not match on /proc/version: " + rawKernelVersion);
+            return "Unavailable";
+        } else if (m.groupCount() < 4) {
+            Log.e(LOG_TAG, "Regex match on /proc/version only returned " + m.groupCount()
+                    + " groups");
+            return "Unavailable";
+        }
+        return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
+            m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
+            m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
     }
 
     /**

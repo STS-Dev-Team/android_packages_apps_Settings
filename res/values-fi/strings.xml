@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s pyytää yhteystietojesi ja puheluhistoriasi käyttöoikeutta. Annetaanko käyttöoikeus (%2$s)?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Älä kysy uudestaan"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Päivämäärä- ja aika-asetukset"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1.00 ip"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13.00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Valitse aikavyöhyke"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Paikallinen (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Esikatselu:"</string>
@@ -709,6 +707,7 @@
     <string name="device_info_settings" product="default" msgid="475872867864762157">"Puhelimen tila"</string>
     <string name="firmware_version" msgid="4801135784886859972">"Android-versio"</string>
     <string name="model_number" msgid="3765737700545384794">"Mallinumero"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"Varustetunnus"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Baseband-versio"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Kernel-versio"</string>
     <string name="build_number" msgid="3075795840572241758">"Ohjelmistoversion numero"</string>
@@ -1405,6 +1404,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Mikään tili ei tällä hetkellä tallenna varmuuskopioituja tietoja"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Automaattinen palauttaminen"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Palauta varmuuskopioidut asetukset ja tiedot, kun sovellus asennetaan uudelleen."</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Luo virheraportti"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Toiminto kerää tietoja nykyisestä laitteen tilasta ja lähettää ne sähköpostitse. Kestää hetken aikaa, ennen kuin virheraportti on valmis lähetettäväksi, ole kärsivällinen."</string>
+    <string name="report" msgid="302437572240018342">"Luo raportti"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"Varmuuskop. salasana"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Tietokoneen kaikkien tietojen varmuuskopiointia ei ole tällä hetkellä suojattu."</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Muuta tai vaihda tietokoneen kaikkien tietojen varmuuskopioinnin salasana koskettamalla"</string>

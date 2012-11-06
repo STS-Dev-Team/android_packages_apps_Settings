@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"A %1$s li agradaria accedir als teus contactes i a l\'historial de trucades. Vols donar accés a %2$s?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"No m\'ho tornis a preguntar"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Configuració de data i hora"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 p. m."</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Selecció de la zona horària"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Regional (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Previsualitza:"</string>
@@ -714,6 +712,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Versió d\'Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Número de model"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"Id. de l\'equip"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Versió de banda base"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Versió de nucli"</string>
     <string name="build_number" msgid="3075795840572241758">"Número de compilació"</string>

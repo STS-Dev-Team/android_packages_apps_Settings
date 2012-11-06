@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s vil gerne have adgang til dine kontaktpersoner og opkaldsoversigt. Vil du give %2$s adgang?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Spørg ikke igen"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Indstillinger for dato og tid"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 pm"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Vælg tidszone"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Regional (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Eksempelvisning:"</string>
@@ -1414,6 +1412,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Der er ingen konto, der i øjeblikket lagrer sikkerhedskopierede data"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Automatisk gendannelse"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Når du geninstallerer en app, skal du gendanne sikkerhedskopierede indstillinger og data"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Lav fejlrapport"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Der indsamles oplysninger om din enheds aktuelle status, der efterfølgende sendes i en e-mail. Der går lidt tid, fra fejlrapporten påbegyndes, til den er klar til at blive sendt. Tak for tålmodigheden."</string>
+    <string name="report" msgid="302437572240018342">"Rapportér"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"Kode til lokal sikkerhedskopi"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Lokale fuldstændige sikkerhedskopieringer er i øjeblikket ikke beskyttet"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Tryk for at skifte eller fjerne adgangskoden til fuld lokal sikkerhedskopiering"</string>

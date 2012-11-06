@@ -218,8 +218,6 @@
     <!-- no translation found for bluetooth_pb_remember_choice (2901499974259177202) -->
     <skip />
     <string name="date_and_time" msgid="4114084177056654663">"Parameters da data e da temp"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00:00"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00:00"</string>
     <!-- no translation found for choose_timezone (1362834506479536274) -->
     <skip />
     <!-- no translation found for normal_date_format (7636406984925498359) -->
@@ -1055,6 +1053,8 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Versiun dad Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Numer dal model"</string>
+    <!-- no translation found for fcc_equipment_id (149114368246356737) -->
+    <skip />
     <string name="baseband_version" msgid="1848990160763524801">"Versiun Baseband"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Versiun dal kernel"</string>
     <string name="build_number" msgid="3075795840572241758">"Numer dal build"</string>
@@ -2115,6 +2115,12 @@
     <skip />
     <string name="auto_restore_title" msgid="5397528966329126506">"Restauraziun automatica"</string>
     <!-- no translation found for auto_restore_summary (4235615056371993807) -->
+    <skip />
+    <!-- no translation found for bugreport_title (1009498799922543551) -->
+    <skip />
+    <!-- no translation found for bugreport_message (1182209569732110590) -->
+    <skip />
+    <!-- no translation found for report (302437572240018342) -->
     <skip />
     <!-- no translation found for local_backup_password_title (3860471654439418822) -->
     <skip />

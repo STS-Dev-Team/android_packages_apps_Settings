@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s muốn truy cập danh bạ và lịch sử cuộc gọi của bạn. Cấp quyền truy cập cho %2$s?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Không hỏi lại"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Cài đặt ngày &amp; giờ"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 ch"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Chọn múi giờ"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Khu vực (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Xem trước:"</string>
@@ -714,6 +712,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Phiên bản của Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Số kiểu"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"ID thiết bị"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Phiên bản dải tần cơ sở"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Phiên bản Kernel"</string>
     <string name="build_number" msgid="3075795840572241758">"Số phiên bản"</string>
@@ -1416,6 +1415,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Hiện không có tài khoản nào lưu trữ dữ liệu được sao lưu"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Tự động khôi phục"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Khi cài đặt lại một ứng dụng, khôi phục dữ liệu và cài đặt đã sao lưu"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Nhận báo cáo lỗi"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Báo cáo này sẽ thu thập thông tin về tình trạng thiết bị hiện tại của bạn, để gửi dưới dạng thông báo qua email. Sẽ mất một chút thời gian kể từ khi bắt đầu báo cáo lỗi cho tới khi báo cáo sẵn sàng để gửi; xin vui lòng kiên nhẫn."</string>
+    <string name="report" msgid="302437572240018342">"Báo cáo"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"MK sao lưu của m.tính"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Sao lưu toàn bộ tới máy tính hiện không được bảo vệ"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Chạm để thay đổi hoặc xóa mật khẩu dành cho bộ sao lưu toàn bộ tới máy tính"</string>

@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s deseja acessar seus contatos e o histórico de chamadas. Conceder acesso a %2$s?"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"Não perguntar novamente"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Configurações de data e hora"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 pm"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"Selecione o fuso horário"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"Regional (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Visualizar:"</string>
@@ -714,6 +712,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Versão do Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Número do modelo"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"ID do equipamento"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Versão da banda de base"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Versão do kernel"</string>
     <string name="build_number" msgid="3075795840572241758">"Número da versão"</string>
@@ -1417,6 +1416,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"Nenhuma conta está armazenando o backup dos dados"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Restauração automática"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"Ao reinstalar um aplicativo, restaura as configurações de backup e dados"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"Obter relatório de bugs"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"Isto coletará informações sobre o estado atual do dispositivo para enviá-las em uma mensagem de e-mail. Após iniciar o relatório de bugs, será necessário aguardar algum tempo até que esteja pronto para ser enviado. Tenha paciência."</string>
+    <string name="report" msgid="302437572240018342">"Gerar relatório"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"Senha do backup local"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"Os backups completos do computador não estão protegidos no momento"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"Toque para alterar ou remover a senha de backups completos do desktop"</string>
@@ -2255,7 +2257,6 @@
     <string name="development_tools_title">Abrir ferramentas</string>
     <string name="lockscreen_vibrate_enabled_title">Vibrar</string>
     <string name="lockscreen_vibrate_enabled_head">Vibra quando desbloqueia</string>
-    <string name="fcc_equipment_id">ID do Equipamento</string>
     <string name="location_gps_source_title">Fonte de GPS</string>
     <string name="location_gps_source_summary">Escolhe entre usar uma antena externa de GPS Bluetooth ou uma antena interna de GPS como provedor localização</string>
     <string name="location_gps_source_notification_title">Alerta</string>

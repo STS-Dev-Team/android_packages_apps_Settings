@@ -160,8 +160,6 @@
     <string name="bluetooth_pb_acceptance_dialog_text" msgid="6555508756987053866">"%1$s ต้องการเข้าถึงสมุดติดต่อและประวัติการโทรของคุณ อนุญาตให้ %2$s เข้าถึงหรือไม่"</string>
     <string name="bluetooth_pb_remember_choice" msgid="2901499974259177202">"ไม่ต้องถามอีก"</string>
     <string name="date_and_time" msgid="4114084177056654663">"การตั้งเวลาและวันที่"</string>
-    <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 pm"</string>
-    <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
     <string name="choose_timezone" msgid="1362834506479536274">"เลือกเขตเวลา"</string>
     <string name="normal_date_format" msgid="7636406984925498359">"ท้องถิ่น (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"แสดงตัวอย่าง:"</string>
@@ -714,6 +712,7 @@
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"เวอร์ชันของ Android"</string>
     <string name="model_number" msgid="3765737700545384794">"หมายเลขรุ่น"</string>
+    <string name="fcc_equipment_id" msgid="149114368246356737">"รหัสอุปกรณ์"</string>
     <string name="baseband_version" msgid="1848990160763524801">"เวอร์ชันเบสแบนด์"</string>
     <string name="kernel_version" msgid="9192574954196167602">"เวอร์ชันเคอร์เนล"</string>
     <string name="build_number" msgid="3075795840572241758">"หมายเลขบิวด์"</string>
@@ -1416,6 +1415,9 @@
     <string name="backup_configure_account_default_summary" msgid="2436933224764745553">"ไม่มีบัญชีใดในปัจจุบันที่จัดเก็บข้อมูลที่สำรองไว้"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"คืนค่าอัตโนมัติ"</string>
     <string name="auto_restore_summary" msgid="4235615056371993807">"เมื่อติดตั้งแอปพลิเคชันใหม่อีกครั้ง ให้คืนค่าการตั้งค่าและข้อมูลที่สำรองไว้"</string>
+    <string name="bugreport_title" msgid="1009498799922543551">"ใช้รายงานข้อผิดพลาด"</string>
+    <string name="bugreport_message" msgid="1182209569732110590">"การดำเนินการนี้จะรวบรวมข้อมูลเกี่ยวกับสถานะปัจจุบันของอุปกรณ์ของคุณ โดยจะส่งไปในรูปแบบข้อความอีเมล อาจใช้เวลาสักครู่ตั้งแต่เริ่มการสร้างรายงานข้อผิดพลาดจนกระทั่งเสร็จสมบูรณ์ โปรดอดทนรอ"</string>
+    <string name="report" msgid="302437572240018342">"รายงาน"</string>
     <string name="local_backup_password_title" msgid="3860471654439418822">"รหัสผ่านการสำรองข้อมูลในเดสก์ท็อป"</string>
     <string name="local_backup_password_summary_none" msgid="393503434408227110">"การสำรองข้อมูลเต็มรูปแบบในเดสก์ท็อปไม่ได้รับการป้องกันในขณะนี้"</string>
     <string name="local_backup_password_summary_change" msgid="2731163425081172638">"แตะเพื่อเปลี่ยนหรือลบรหัสผ่านสำหรับการสำรองข้อมูลเต็มรูปแบบในเดสก์ท็อป"</string>
