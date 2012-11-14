@@ -98,6 +98,9 @@
         </PreferenceScreen>
         -->
 
+        <com.android.settings.RegulatoryInfoPreference android:key="regulatory_info"
+                android:title="@string/regulatory_information" />
+
         <!-- Device hardware model -->
         <Preference android:key="device_model" 
                 style="?android:preferenceInformationStyle"
