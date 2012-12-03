@@ -2272,6 +2272,26 @@
     <!-- Wireless controls, item title to go into the network settings -->
     <string name="network_settings_title">Mobile networks</string>
 
+    <!-- Used in the 1st-level settings screen to turn on Moto OEM mode -->
+    <string name="moto_oem_quick_toggle_title">Enable alt OEM telephony code</string>
+    <!-- Description of Moto OEM in the 1st level settings screen. [CHAR LIMIT=NONE] -->
+    <string name="moto_oem_quick_toggle_summary">Required by certain carriers such as VZW - REBOOT REQUIRED</string>
+
+    <!-- Used in the 1st-level settings screen to turn on Fix IMSI mode -->
+    <string name="imsi_fix_quick_toggle_title">Enable alternate getIMSI code</string>
+    <!-- Description of Fix IMSI in the 1st level settings screen. [CHAR LIMIT=NONE] -->
+    <string name="imsi_fix_quick_toggle_summary">Required by certain carriers such as VZW - REBOOT REQUIRED</string>
+
+    <!-- Used in the 1st-level settings screen to turn on World Phone mode -->
+    <string name="world_phone_quick_toggle_title">Enable World Phone settings</string>
+    <!-- Description of World Phone in the 1st level settings screen. [CHAR LIMIT=NONE] -->
+    <string name="world_phone_quick_toggle_summary">Shows preferences for Global mode in Mobile networks settings</string>
+
+    <!-- Used in the 1st-level settings screen to turn on GSM Signal Strength Fix -->
+    <string name="gsm_signalstrength_fix_quick_toggle_title">Enable GSM Signal Strength Fix</string>
+    <!-- Description of GSM Signal Strength Fix in the 1st level settings screen. [CHAR LIMIT=NONE] -->
+    <string name="gsm_signalstrength_fix_quick_toggle_summary">Needed to display proper signal strength reading in GSM mode</string>
+
     <!-- Security & location settings screen, section header for settings relating to location -->
     <string name="location_title">My Location</string>
     <!-- [CHAR LIMIT=30] Security & location settings screen, setting check box label for Google location service (cell ID, wifi, etc.) -->
